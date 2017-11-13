@@ -166,42 +166,22 @@ class WormPlayer(object):
       deltaX = deltas[0]
       deltaY = deltas[1]
       
-      if pyglet.window.key.LEFT in playLayer.keys_being_pressed:
+      if pyglet.window.key.LEFT in playLayer.keys_being_pressed or pyglet.window.key.A in playLayer.keys_being_pressed:
          #print('Left')
          deltas = WormPlayer.directionDeltas[3]
          deltaX += deltas[0]
          deltaY += deltas[1]
-      if pyglet.window.key.RIGHT in playLayer.keys_being_pressed:
+      if pyglet.window.key.RIGHT in playLayer.keys_being_pressed or pyglet.window.key.D in playLayer.keys_being_pressed:
          #print('Right')
          deltas = WormPlayer.directionDeltas[1]
          deltaX += deltas[0]
          deltaY += deltas[1]
-      if pyglet.window.key.UP in playLayer.keys_being_pressed:
+      if pyglet.window.key.UP in playLayer.keys_being_pressed or pyglet.window.key.W in playLayer.keys_being_pressed:
          #print('Up')
          deltas = WormPlayer.directionDeltas[2]
          deltaX += deltas[0]
          deltaY += deltas[1]
-      if pyglet.window.key.DOWN in playLayer.keys_being_pressed:
-         #print('Down')
-         deltas = WormPlayer.directionDeltas[0]
-         deltaX += deltas[0]
-         deltaY += deltas[1]
-      if pyglet.window.key.A in playLayer.keys_being_pressed:
-         #print('Left')
-         deltas = WormPlayer.directionDeltas[3]
-         deltaX += deltas[0]
-         deltaY += deltas[1]
-      if pyglet.window.key.D in playLayer.keys_being_pressed:
-         #print('Right')
-         deltas = WormPlayer.directionDeltas[1]
-         deltaX += deltas[0]
-         deltaY += deltas[1]
-      if pyglet.window.key.W in playLayer.keys_being_pressed:
-         #print('Up')
-         deltas = WormPlayer.directionDeltas[2]
-         deltaX += deltas[0]
-         deltaY += deltas[1]
-      if pyglet.window.key.S in playLayer.keys_being_pressed:
+      if pyglet.window.key.DOWN in playLayer.keys_being_pressed or pyglet.window.key.S in playLayer.keys_being_pressed:
          #print('Down')
          deltas = WormPlayer.directionDeltas[0]
          deltaX += deltas[0]
