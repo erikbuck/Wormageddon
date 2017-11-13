@@ -186,6 +186,26 @@ class WormPlayer(object):
          deltas = WormPlayer.directionDeltas[0]
          deltaX += deltas[0]
          deltaY += deltas[1]
+      if pyglet.window.key.A in playLayer.keys_being_pressed:
+         #print('Left')
+         deltas = WormPlayer.directionDeltas[3]
+         deltaX += deltas[0]
+         deltaY += deltas[1]
+      if pyglet.window.key.D in playLayer.keys_being_pressed:
+         #print('Right')
+         deltas = WormPlayer.directionDeltas[1]
+         deltaX += deltas[0]
+         deltaY += deltas[1]
+      if pyglet.window.key.W in playLayer.keys_being_pressed:
+         #print('Up')
+         deltas = WormPlayer.directionDeltas[2]
+         deltaX += deltas[0]
+         deltaY += deltas[1]
+      if pyglet.window.key.S in playLayer.keys_being_pressed:
+         #print('Down')
+         deltas = WormPlayer.directionDeltas[0]
+         deltaX += deltas[0]
+         deltaY += deltas[1]
          
       nextX = self.segments[-1].position[0] + deltaX
       nextY = self.segments[-1].position[1] + deltaY
